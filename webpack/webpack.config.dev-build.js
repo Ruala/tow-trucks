@@ -10,7 +10,7 @@ const extractLess = new ExtractTextPlugin({
 
 module.exports = merge(common, {
     mode: 'development',
-    devtool: 'cheap-eval-source-map',
+    devtool: 'eval-source-map',
     plugins: [
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('development')
