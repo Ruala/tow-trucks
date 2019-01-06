@@ -33,12 +33,16 @@ module.exports = merge(common, {
             //   }
             // },
             {
-                test: /\.(js)$/,
+                test: /\.js$/,
                 loader: 'babel-loader'
             },
             {
                 test: /\.(less|css)$/,
                 use: ['style-loader', 'css-loader?sourceMap=true', 'resolve-url-loader', 'less-loader']
+            },
+            {
+                test: /\.scss$/,
+                use: ['style-loader', 'css-loader?sourceMap=true', 'resolve-url-loader', 'sass-loader']
             },
         ]
     }

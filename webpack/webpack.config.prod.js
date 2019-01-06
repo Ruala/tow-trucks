@@ -4,7 +4,7 @@ const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 const webpack = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const extractLess = new ExtractTextPlugin({
+const extractor = new ExtractTextPlugin({
     filename: "styles/styles.css",
 });
 
@@ -22,18 +22,22 @@ module.exports = merge(common, {
         new ExtractTextPlugin({filename: 'bundle.css'}),
         // compiling mode “scope hoisting”
         new webpack.optimize.ModuleConcatenationPlugin(),
-        extractLess,
+        extractor,
     ],
     module: {
         rules: [
             {
-                test: /\.(js)$/,
+                test: /\.js$/,
                 use: 'babel-loader'
             },
             {
                 test: /\.(less|css)$/,
-                use: extractLess.extract(['css-loader?minimize=true', 'less-loader'])
-            }
+                use: extractor.extract(['css-loader?minimize=true', 'less-loader'])
+            },
+            {
+                test: /\.scss$/,
+                use: extractor.extract(['css-loader?minimize=true', 'sass-loader'])
+            },
         ]
     }
 });

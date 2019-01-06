@@ -20,12 +20,16 @@ module.exports = merge(common, {
     module: {
         rules: [
             {
-                test: /\.(js)$/,
+                test: /\.js$/,
                 loader: 'babel-loader'
             },
             {
                 test: /\.(less|css)$/,
-                use: extractLess.extract(['css-loader?minimize=true?sourceMap=true', 'less-loader'])
+                use: extractLess.extract(['css-loader?minimize=true?sourceMap=true', 'less-loader']),
+            },
+            {
+                test: /\.scss$/,
+                use: extractLess.extract(['css-loader?minimize=true?sourceMap=true', 'sass-loader']),
             },
         ],
     },
