@@ -9,5 +9,5 @@ features:
 
 
 scripts:
-- dev - development (with dev server)
+- start - development (with dev server)
 - build - production
