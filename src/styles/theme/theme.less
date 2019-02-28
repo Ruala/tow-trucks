@@ -28,10 +28,6 @@
   background-color: @primary-background;
 }
 
-.uk-background-secondary {
-  background-color: @secondary-background;
-}
-
 .uk-text-primary {
   color: @primary-background !important;
 }
@@ -64,6 +60,17 @@
 
 .uk-offcanvas-bar {
   padding-top: 50px;
+  color: @text-color;
+  background: @primary-background;
+
+  a,
+  .uk-close {
+    color: @text-color;
+
+    &:hover {
+      color: @text-color;
+    }
+  }
 }
 
 .uk-offcanvas-close {
