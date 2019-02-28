@@ -1,0 +1,27 @@
+.menu-main {
+
+  > li {
+
+    > a {
+      min-height: 50px;
+      font-weight: bold;
+      color: @text-color;
+    }
+
+    &:hover > a,
+    > a.uk-open,
+    > a:focus {
+      color: @text-color;
+      background-color: @primary-background;
+    }
+
+    &.uk-active > a {
+      color: @text-color;
+      background-color: @primary-background;
+    }
+  }
+
+  .uk-navbar-dropdown {
+    width: 250px;
+  }
+}

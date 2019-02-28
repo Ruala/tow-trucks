@@ -1,0 +1,120 @@
+.uk-h1, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6, h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+.uk-button {
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.uk-button-primary {
+  color: @text-color;
+  background-color: @primary-background;
+
+  &:hover,
+  &:focus {
+    color: @text-color;
+    background-color: lighten(@primary-background, 15%);
+  }
+
+  &:active,
+  &.uk-active {
+    color: @text-color;
+    background-color: lighten(@primary-background, 10%);
+  }
+}
+
+.uk-background-primary {
+  background-color: @primary-background;
+}
+
+.uk-background-secondary {
+  background-color: @secondary-background;
+}
+
+.uk-text-primary {
+  color: @primary-background !important;
+}
+
+.uk-navbar-item {
+  color: @text-color;
+}
+
+.uk-tab {
+
+  > * > a {
+    padding: 10px;
+    font-size: 16px;
+    text-transform: none;
+    text-align: left;
+  }
+
+  > .uk-active > a {
+    border-color: @primary-background;
+  }
+}
+
+.uk-tab-right {
+
+  &::before,
+  > * > a {
+    border-left-width: 5px;
+  }
+}
+
+.uk-offcanvas-bar {
+  padding-top: 50px;
+}
+
+.uk-offcanvas-close {
+  top: 15px;
+}
+
+.uk-checkbox:checked,
+.uk-checkbox:indeterminate,
+.uk-radio:checked {
+  background-color: @primary-background;
+
+  &:focus {
+    background-color: @primary-background;
+  }
+}
+
+.uk-checkbox:focus, .uk-radio:focus {
+  border-color: @primary-background;
+}
+
+.uk-logo {
+  align-items: start;
+  font-size: 16px;
+
+  &:hover,
+  &:focus {
+    color: @text-color;
+  }
+}
+
+@media (max-width: 639px) {
+
+  .uk-logo {
+    max-width: 250px;
+  }
+
+  .uk-padding {
+    padding: 15px;
+  }
+
+  .uk-tab > * > a {
+    font-size: 14px;
+  }
+
+  .uk-modal-header,
+  .uk-modal-body,
+  .uk-modal-header {
+    padding: 15px;
+  }
+
+  .uk-modal-title {
+    font-size: 18px;
+  }
+}

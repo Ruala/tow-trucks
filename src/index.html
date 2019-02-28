@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -8,11 +8,11 @@
     <title>Document</title>
 
     <!-- UIkit CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/css/uikit.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css" />
 
     <!-- UIkit JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/js/uikit.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/js/uikit-icons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit-icons.min.js"></script>
 </head>
 <body>
 
@@ -21,59 +21,885 @@
         <div>
 
             <!--Header-->
-            <header class="uk-navbar-container uk-position-relative">
+            <header class="header uk-navbar-container uk-position-relative">
                 <nav uk-navbar>
                     <div class="uk-navbar-left">
 
-                        <!--mobile menu toggle-->
-                        <a href="#offcanvas-overlay" class="uk-navbar-toggle uk-hidden@l"
-                           uk-navbar-toggle-icon uk-toggle></a>
-
                         <!--logo-->
-                        <a class="uk-navbar-item uk-logo" href="/">
-                            <img src="images/logo_tourweek.png" alt="">
+                        <a class="uk-navbar-item uk-logo uk-flex-column" href="/">
+                            <img src="https://via.placeholder.com/300x60" alt="logo">
+                            <span class="slogan uk-visible@s">Слоган - лаконичная, легко запоминающаяся фраза.</span>
                         </a>
-
-                        <!--navbar menu-->
-                        <ul class="uk-navbar-nav uk-visible@l">
-                            <li><a href="#"></a></li>
-                            <li>
-                                <a href="#"></a>
-
-                                <div class="uk-navbar-dropdown"
-                                     uk-drop="mode: click; boundary: !header; boundary-align: true; pos: bottom-justify;">
-                                    <div class="uk-container">
-                                        <ul class="uk-nav uk-navbar-dropdown-nav uk-column-1-4">
-                                            <li><a href="#"></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
 
                     </div>
 
-                    <div class="uk-navbar-center uk-visible@l"></div>
+                    <div class="uk-navbar-right">
+                        <div class="uk-navbar-item uk-visible@l">
+                            <a href="#form-call-reverse" class="uk-button uk-button-primary" uk-toggle>Заказать эвакуатор</a>
+                        </div>
 
-                    <div class="uk-navbar-right"></div>
+                        <div class="uk-navbar-item uk-visible@m">
+                            <a href="tel:+71234567890" class="header__phone uk-flex-last@l">+7 123 456 78 90</a>
+                        </div>
+
+                        <!--mobile menu toggle-->
+                        <a href="#offcanvas-overlay" class="uk-navbar-toggle uk-hidden@l"
+                           uk-navbar-toggle-icon uk-toggle>
+                        </a>
+                    </div>
                 </nav>
             </header>
 
-            <!-- Section -->
+            <!--Top nav-->
+            <nav class="navbar-top" uk-navbar>
+                <div class="uk-navbar-center">
+
+                    <!--Main menu-->
+                    <ul class="menu-main uk-navbar-nav uk-visible@l">
+                        <li class="uk-active"><a href="#">Главная</a></li>
+                        <li>
+                            <a href="#">Услуги эвакуатора</a>
+                            <div class="uk-navbar-dropdown">
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li><a href="#">Пункт меню</a></li>
+                                    <li><a href="#">Пункт меню</a></li>
+                                    <li><a href="#">Пункт меню</a></li>
+                                    <li><a href="#">Пункт выпадающего меню</a></li>
+                                    <li><a href="#">Пункт меню</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Пункт меню</a>
+                            <div class="uk-navbar-dropdown">
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li><a href="#">Пункт меню</a></li>
+                                    <li><a href="#">Пункт выпадающего меню</a></li>
+                                    <li><a href="#">Пункт выпадающего меню</a></li>
+                                    <li><a href="#">Пункт выпадающего меню</a></li>
+                                    <li><a href="#">Пункт выпадающего меню</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Пункт меню</a>
+                        </li>
+                        <li>
+                            <a href="#">Пункт меню</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+
+            <!-- Calculator -->
+            <div class="uk-section uk-background-primary">
+                <div class="uk-container">
+                    <h1>Заголовок h1</h1>
+                    <div class="uk-child-width-expand@l" uk-grid>
+                        <div>
+                            <form class="uk-padding uk-background-default uk-border-rounded uk-box-shadow-large">
+                                <div class="uk-child-width-expand uk-grid-small" uk-grid>
+                                    <div class="uk-width-auto">
+                                        <ul class="uk-child-width-1-1 uk-tab-right" uk-tab="connect: #type-tab; animation: uk-animation-fade;">
+                                            <li class="uk-active">
+                                                <a href="#">
+                                                    <span class="uk-flex uk-flex-middle">
+                                                        <img src="images/moto.jpg" class="uk-margin-small-right" width="40" alt="">
+                                                        <span class="uk-flex uk-flex-column">
+                                                            <span class="uk-text-bold uk-margin-small-right">Мотоцикл</span>
+                                                            <span class="uk-text-small uk-text-muted">до 10 тонн</span>
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="uk-flex uk-flex-middle">
+                                                        <img src="images/car.jpg" class="uk-margin-small-right" width="40" alt="">
+                                                        <span class="uk-flex uk-flex-column">
+                                                            <span class="uk-text-bold uk-margin-small-right">Легковой автомобиль</span>
+                                                            <span class="uk-text-small uk-text-muted">до 1.8 тонн</span>
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="uk-flex uk-flex-middle">
+                                                        <img src="images/suv.jpg" class="uk-margin-small-right" width="40" alt="">
+                                                        <span class="uk-flex uk-flex-column">
+                                                            <span class="uk-text-bold uk-margin-small-right">Внедорожник</span>
+                                                            <span class="uk-text-small uk-text-muted">до 2.8 тонн</span>
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="uk-flex uk-flex-middle">
+                                                        <img src="images/van.jpg" class="uk-margin-small-right" width="40" alt="">
+                                                        <span class="uk-flex uk-flex-column">
+                                                            <span class="uk-text-bold uk-margin-small-right">Коммерческий транспорт</span>
+                                                            <span class="uk-text-small uk-text-muted">до 3.6 тонн</span>
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div>
+                                        <ul id="type-tab" class="uk-switcher">
+                                            <li>
+                                                <h5 class="uk-margin-small">Сколько колес заблокировано?</h5>
+                                                <div class="uk-margin-small uk-grid-small uk-child-width-auto uk-grid">
+                                                    <label><input class="uk-radio" type="radio" name="radio" checked> 0</label>
+                                                    <label><input class="uk-radio" type="radio" name="radio"> 1</label>
+                                                    <label><input class="uk-radio" type="radio" name="radio"> 2</label>
+                                                </div>
+                                                <div class="uk-margin-small uk-grid-small uk-child-width-auto uk-grid" uk-margin>
+                                                    <label><input class="uk-checkbox" type="checkbox"> Руль заблокирован</label>
+                                                    <label><input class="uk-checkbox" type="checkbox"> КПП заблокирована</label>
+                                                </div>
+                                                <h5 class="uk-margin-small">Ваш телефон</h5>
+                                                <div class="uk-margin-small">
+                                                    <input class="uk-input" type="text" name="phone" placeholder="+7 ( ___ ) ___ - __ - __">
+                                                </div>
+                                                <div class="uk-margin-small uk-grid-small uk-child-width-auto uk-grid" uk-margin>
+                                                    <label><input class="uk-checkbox" type="checkbox"> <span class="uk-text-danger uk-text-bold">Скидка 10%</span> по предварительному заказу</label>
+                                                </div>
+                                                <div class="uk-margin-small uk-grid-small uk-flex-between uk-flex-bottom" uk-grid>
+                                                    <div>
+                                                        <h4 class="uk-margin-remove">Сумма заказа:</h4>
+                                                    </div>
+                                                    <div>
+                                                        <div class="uk-text-danger uk-text-bold">3 000 руб.</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="uk-text-small uk-text-muted">* Окончательную стоимость перевозки уточняйте у диспетчеров</div>
+                                            </li>
+                                            <li>
+                                                <h5 class="uk-margin-small">Сколько колес заблокировано?</h5>
+                                                <div class="uk-margin-small uk-grid-small uk-child-width-auto uk-grid">
+                                                    <label><input class="uk-radio" type="radio" name="radio2" checked> 0</label>
+                                                    <label><input class="uk-radio" type="radio" name="radio2"> 1</label>
+                                                    <label><input class="uk-radio" type="radio" name="radio2"> 2</label>
+                                                    <label><input class="uk-radio" type="radio" name="radio2"> 3</label>
+                                                    <label><input class="uk-radio" type="radio" name="radio2"> 4</label>
+                                                </div>
+                                                <div class="uk-margin-small uk-grid-small uk-child-width-auto uk-grid" uk-margin>
+                                                    <label><input class="uk-checkbox" type="checkbox"> Руль заблокирован</label>
+                                                    <label><input class="uk-checkbox" type="checkbox"> КПП заблокирована</label>
+                                                </div>
+                                                <h5 class="uk-margin-small">Ваш телефон</h5>
+                                                <div class="uk-margin-small">
+                                                    <input class="uk-input" type="text" name="phone" placeholder="+7 ( ___ ) ___ - __ - __">
+                                                </div>
+                                                <div class="uk-margin-small uk-grid-small uk-child-width-auto uk-grid" uk-margin>
+                                                    <label><input class="uk-checkbox" type="checkbox"> <span class="uk-text-danger uk-text-bold">Скидка 10%</span> по предварительному заказу</label>
+                                                </div>
+                                                <div class="uk-margin-small uk-grid-small uk-flex-between uk-flex-bottom" uk-grid>
+                                                    <div>
+                                                        <h4 class="uk-margin-remove">Сумма заказа:</h4>
+                                                    </div>
+                                                    <div>
+                                                        <div class="uk-text-danger uk-text-bold">3 000 руб.</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="uk-text-small uk-text-muted">* Окончательную стоимость перевозки уточняйте у диспетчеров</div>
+                                            </li>
+                                            <li>
+                                                <h5 class="uk-margin-small">Сколько колес заблокировано?</h5>
+                                                <div class="uk-margin-small uk-grid-small uk-child-width-auto uk-grid">
+                                                    <label><input class="uk-radio" type="radio" name="radio3" checked> 0</label>
+                                                    <label><input class="uk-radio" type="radio" name="radio3"> 1</label>
+                                                    <label><input class="uk-radio" type="radio" name="radio3"> 2</label>
+                                                    <label><input class="uk-radio" type="radio" name="radio3"> 3</label>
+                                                    <label><input class="uk-radio" type="radio" name="radio3"> 4</label>
+                                                </div>
+                                                <div class="uk-margin-small uk-grid-small uk-child-width-auto uk-grid" uk-margin>
+                                                    <label><input class="uk-checkbox" type="checkbox"> Руль заблокирован</label>
+                                                    <label><input class="uk-checkbox" type="checkbox"> КПП заблокирована</label>
+                                                </div>
+                                                <h5 class="uk-margin-small">Ваш телефон</h5>
+                                                <div class="uk-margin-small">
+                                                    <input class="uk-input" type="text" name="phone" placeholder="+7 ( ___ ) ___ - __ - __">
+                                                </div>
+                                                <div class="uk-margin-small uk-grid-small uk-child-width-auto uk-grid" uk-margin>
+                                                    <label><input class="uk-checkbox" type="checkbox"> <span class="uk-text-danger uk-text-bold">Скидка 10%</span> по предварительному заказу</label>
+                                                </div>
+                                                <div class="uk-margin-small uk-grid-small uk-flex-between uk-flex-bottom" uk-grid>
+                                                    <div>
+                                                        <h4 class="uk-margin-remove">Сумма заказа:</h4>
+                                                    </div>
+                                                    <div>
+                                                        <div class="uk-text-danger uk-text-bold">3 000 руб.</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="uk-text-small uk-text-muted">* Окончательную стоимость перевозки уточняйте у диспетчеров</div>
+                                            </li>
+                                            <li>
+                                                <h5 class="uk-margin-small">Сколько колес заблокировано?</h5>
+                                                <div class="uk-margin-small uk-grid-small uk-child-width-auto uk-grid">
+                                                    <label><input class="uk-radio" type="radio" name="radio4" checked> 0</label>
+                                                    <label><input class="uk-radio" type="radio" name="radio4"> 1</label>
+                                                    <label><input class="uk-radio" type="radio" name="radio4"> 2</label>
+                                                    <label><input class="uk-radio" type="radio" name="radio4"> 3</label>
+                                                    <label><input class="uk-radio" type="radio" name="radio4"> 4</label>
+                                                </div>
+                                                <div class="uk-margin-small uk-grid-small uk-child-width-auto uk-grid" uk-margin>
+                                                    <label><input class="uk-checkbox" type="checkbox"> Руль заблокирован</label>
+                                                    <label><input class="uk-checkbox" type="checkbox"> КПП заблокирована</label>
+                                                </div>
+                                                <h5 class="uk-margin-small">Ваш телефон</h5>
+                                                <div class="uk-margin-small">
+                                                    <input class="uk-input" type="text" name="phone" placeholder="+7 ( ___ ) ___ - __ - __">
+                                                </div>
+                                                <div class="uk-margin-small uk-grid-small uk-child-width-auto uk-grid" uk-margin>
+                                                    <label><input class="uk-checkbox" type="checkbox"> <span class="uk-text-danger uk-text-bold">Скидка 10%</span> по предварительному заказу</label>
+                                                </div>
+                                                <div class="uk-margin-small uk-grid-small uk-flex-between uk-flex-bottom" uk-grid>
+                                                    <div>
+                                                        <h4 class="uk-margin-remove">Сумма заказа:</h4>
+                                                    </div>
+                                                    <div>
+                                                        <div class="uk-text-danger uk-text-bold">3 000 руб.</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="uk-text-small uk-text-muted">* Окончательную стоимость перевозки уточняйте у диспетчеров</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+
+                                <div class="uk-margin uk-text-right">
+                                    <a href="#" class="uk-button uk-button-primary">Заказать</a>
+                                </div>
+                            </form>
+
+                        </div>
+
+                        <div class="uk-width-auto@l">
+                            <h3>Ориентировочная стоимость:</h3>
+
+                            <ul class="uk-list uk-text-bold">
+                                <li>
+                                    <div class="uk-child-width-expand uk-grid-small" uk-grid>
+                                        <div class="uk-width-auto">
+                                            <img src="https://via.placeholder.com/100x60" alt="image">
+                                        </div>
+                                        <div>
+                                            <div class="uk-text-uppercase">Мотоциклы</div>
+                                            <div class="">от 1 200 руб.</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="uk-child-width-expand uk-grid-small" uk-grid>
+                                        <div class="uk-width-auto">
+                                            <img src="https://via.placeholder.com/100x60" alt="image">
+                                        </div>
+                                        <div>
+                                            <div class="uk-text-uppercase">Легковые автомобили</div>
+                                            <div class="">от 1 600 руб.</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="uk-child-width-expand uk-grid-small" uk-grid>
+                                        <div class="uk-width-auto">
+                                            <img src="https://via.placeholder.com/100x60" alt="image">
+                                        </div>
+                                        <div>
+                                            <div class="uk-text-uppercase">Кроссоверы</div>
+                                            <div class="">от 1 800 руб.</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="uk-child-width-expand uk-grid-small" uk-grid>
+                                        <div class="uk-width-auto">
+                                            <img src="https://via.placeholder.com/100x60" alt="image">
+                                        </div>
+                                        <div>
+                                            <div class="uk-text-uppercase">Микроавтобусы</div>
+                                            <div class="">от 2 200 руб.</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="uk-child-width-expand uk-grid-small" uk-grid>
+                                        <div class="uk-width-auto">
+                                            <img src="https://via.placeholder.com/100x60" alt="image">
+                                        </div>
+                                        <div>
+                                            <div class="uk-text-uppercase">Газели</div>
+                                            <div class="">от 2 600 руб.</div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map -->
             <div class="uk-section">
                 <div class="uk-container">
+                    <div class="map-wrapper">
+                        <div class="uk-child-width-expand@s uk-grid-small" uk-grid>
+                            <div class="uk-width-medium@s">
+                                <div class="map__info">
+                                    <h2>Заголовок h2</h2>
+                                    <ul class="map__list uk-list uk-list-bullet"></ul>
+                                </div>
+                            </div>
+                            <div>
+                                <div id="map" class="map"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Choice tabs -->
+            <div class="uk-section uk-background-muted">
+                <div class="uk-container">
+                    <h3>Заголовок h3</h3>
+                    <ul uk-tab="connect: #place-tab; animation: uk-animation-fade;">
+                        <li class="uk-active"><a href="#">Округ</a></li>
+                        <li><a href="#">Район</a></li>
+                        <li><a href="#">Метро</a></li>
+                        <li><a href="#">Шоссе</a></li>
+                    </ul>
+
+                    <ul id="place-tab" class="uk-switcher">
+                        <li>
+                            <ul class="uk-list uk-list-divider">
+                                <li>
+                                    <a href="#">Эвакуаторы по округу</a>
+                                </li>
+                                <li>
+                                    <a href="#">Эвакуаторы по округу</a>
+                                </li>
+                                <li>
+                                    <a href="#">Эвакуаторы по округу</a>
+                                </li>
+                                <li>
+                                    <a href="#">Эвакуаторы по округу</a>
+                                </li>
+                                <li>
+                                    <a href="#">Эвакуаторы по округу</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="uk-list uk-list-divider">
+                                <li>
+                                    <a href="#">Эвакуаторы по району</a>
+                                </li>
+                                <li>
+                                    <a href="#">Эвакуаторы по району</a>
+                                </li>
+                                <li>
+                                    <a href="#">Эвакуаторы по району</a>
+                                </li>
+                                <li>
+                                    <a href="#">Эвакуаторы по району</a>
+                                </li>
+                                <li>
+                                    <a href="#">Эвакуаторы по району</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="uk-list uk-list-divider">
+                                <li>
+                                    <a href="#">Эвакуаторы у метро</a>
+                                </li>
+                                <li>
+                                    <a href="#">Эвакуаторы у метро</a>
+                                </li>
+                                <li>
+                                    <a href="#">Эвакуаторы у метро</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="uk-list uk-list-divider">
+                                <li>
+                                    <a href="#">Эвакуаторы на шоссе</a>
+                                </li>
+                                <li>
+                                    <a href="#">Эвакуаторы на шоссе</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Info text-->
+            <div class="uk-section">
+                <div class="uk-container">
+                    <h3>Заголовок h3</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+
+                    <div class="uk-child-width-1-3@s" uk-grid uk-height-match="target: > div > .uk-card">
+                        <div>
+                            <div class="uk-card uk-child-width-expand uk-grid-small" uk-grid>
+                                <div class="uk-width-auto ">
+                                    <h4 class="uk-text-primary"><i class="fa fa-tag" aria-hidden="true"></i></h4>
+                                </div>
+                                <div class="uk-child-width-1-1 uk-flex uk-flex-wrap uk-flex-wrap-between">
+                                    <div>
+                                        <h4>Дешево</h4>
+                                        <p><i>Стоимость эвакуации автомобиля от 1180р.</i></p>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="uk-button uk-button-primary">Рассчитать онлайн</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="uk-card uk-child-width-expand uk-grid-small" uk-grid>
+                                <div class="uk-width-auto ">
+                                    <h4 class="uk-text-primary"><i class="fa fa-hourglass-end" aria-hidden="true"></i></h4>
+                                </div>
+                                <div class="uk-child-width-1-1 uk-flex uk-flex-wrap uk-flex-wrap-between">
+                                    <div>
+                                        <h4>Быстро</h4>
+                                        <p><i>Время подачи в любой район Москвы от 20 мин</i></p>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="uk-button uk-button-primary">Найти ближайший эвакуатор</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="uk-card uk-child-width-expand uk-grid-small" uk-grid>
+                                <div class="uk-width-auto ">
+                                    <h4 class="uk-text-primary"><i class="fa fa-clock-o" aria-hidden="true"></i></h4>
+                                </div>
+                                <div class="uk-child-width-1-1 uk-flex uk-flex-wrap uk-flex-wrap-between">
+                                    <div>
+                                        <h4>Круглосуточно</h4>
+                                        <p><i>Работаем 24 часа в сутки 7 дней в неделю</i></p>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="uk-button uk-button-primary">Заказать эвакуатор</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Feedback -->
+            <div class="uk-section uk-background-muted">
+                <div class="uk-container">
+                    <h3>Заголовок h3</h3>
+
+                    <div uk-slider>
+
+                        <div class="uk-position-relative uk-visible-toggle">
+
+                            <div class="uk-slider-container">
+                                <ul class="uk-slider-items uk-child-width-1-2@s uk-child-width-1-3@m uk-grid-small" uk-grid uk-height-match="target: .uk-card">
+                                    <li>
+                                        <div class="uk-child-width-1-1 uk-card uk-card-default uk-flex uk-flex-wrap uk-flex-wrap-between">
+                                            <div>
+                                                <div class="uk-card-header">
+                                                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                                        <div class="uk-width-auto">
+                                                            <img class="uk-border-circle" width="50" height="50" src="https://via.placeholder.com/50x50">
+                                                        </div>
+                                                        <div class="uk-width-expand">
+                                                            <h3 class="uk-card-title uk-margin-remove-bottom">Title</h3>
+                                                            <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00">April 01, 2016</time></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="uk-card-body">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="uk-card-footer">
+                                                <a href="#" class="uk-button uk-button-text">Read more</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="uk-child-width-1-1 uk-card uk-card-default uk-flex uk-flex-wrap uk-flex-wrap-between">
+                                            <div>
+                                                <div class="uk-card-header">
+                                                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                                        <div class="uk-width-auto">
+                                                            <img class="uk-border-circle" width="50" height="50" src="https://via.placeholder.com/50x50">
+                                                        </div>
+                                                        <div class="uk-width-expand">
+                                                            <h3 class="uk-card-title uk-margin-remove-bottom">Title</h3>
+                                                            <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00">April 01, 2016</time></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="uk-card-body">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                                        incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                        eiusmod tempor incididunt.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="uk-card-footer">
+                                                <a href="#" class="uk-button uk-button-text">Read more</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="uk-child-width-1-1 uk-card uk-card-default uk-flex uk-flex-wrap uk-flex-wrap-between">
+                                            <div>
+                                                <div class="uk-card-header">
+                                                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                                        <div class="uk-width-auto">
+                                                            <img class="uk-border-circle" width="50" height="50" src="https://via.placeholder.com/50x50">
+                                                        </div>
+                                                        <div class="uk-width-expand">
+                                                            <h3 class="uk-card-title uk-margin-remove-bottom">Title</h3>
+                                                            <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00">April 01, 2016</time></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="uk-card-body">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                                        incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                        eiusmod tempor incididunt.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="uk-card-footer">
+                                                <a href="#" class="uk-button uk-button-text">Read more</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="uk-child-width-1-1 uk-card uk-card-default uk-flex uk-flex-wrap uk-flex-wrap-between">
+                                            <div>
+                                                <div class="uk-card-header">
+                                                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                                        <div class="uk-width-auto">
+                                                            <img class="uk-border-circle" width="50" height="50" src="https://via.placeholder.com/50x50">
+                                                        </div>
+                                                        <div class="uk-width-expand">
+                                                            <h3 class="uk-card-title uk-margin-remove-bottom">Title</h3>
+                                                            <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00">April 01, 2016</time></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="uk-card-body">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                                        incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                        eiusmod tempor incididunt.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="uk-card-footer">
+                                                <a href="#" class="uk-button uk-button-text">Read more</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="uk-child-width-1-1 uk-card uk-card-default uk-flex uk-flex-wrap uk-flex-wrap-between">
+                                            <div>
+                                                <div class="uk-card-header">
+                                                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                                        <div class="uk-width-auto">
+                                                            <img class="uk-border-circle" width="50" height="50" src="https://via.placeholder.com/50x50">
+                                                        </div>
+                                                        <div class="uk-width-expand">
+                                                            <h3 class="uk-card-title uk-margin-remove-bottom">Title</h3>
+                                                            <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00">April 01, 2016</time></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="uk-card-body">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                                        incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                        eiusmod tempor incididunt.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="uk-card-footer">
+                                                <a href="#" class="uk-button uk-button-text">Read more</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <a class="uk-position-center-left uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                            <a class="uk-position-center-right uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+                        </div>
+
+                        <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- Popular services -->
+            <div class="uk-section">
+                <div class="uk-container">
+                    <h3>Заголовок h3</h3>
+                    <ul class="uk-list uk-list-striped">
+                        <li>
+                            <a href="#">Ссылка на популярную услугу</a>
+                        </li>
+                        <li>
+                            <a href="#">Ссылка на популярную услугу</a>
+                        </li>
+                        <li>
+                            <a href="#">Ссылка на популярную услугу</a>
+                        </li>
+                        <li>
+                            <a href="#">Ссылка на популярную услугу</a>
+                        </li>
+                        <li>
+                            <a href="#">Ссылка на популярную услугу</a>
+                        </li>
+                        <li>
+                            <a href="#">Ссылка на популярную услугу</a>
+                        </li>
+                        <li>
+                            <a href="#">Ссылка на популярную услугу</a>
+                        </li>
+                        <li>
+                            <a href="#">Ссылка на популярную услугу</a>
+                        </li>
+                        <li>
+                            <a href="#">Ссылка на популярную услугу</a>
+                        </li>
+                        <li>
+                            <a href="#">Ссылка на популярную услугу</a>
+                        </li>
+                        <li>
+                            <a href="#">Ссылка на популярную услугу</a>
+                        </li>
+                        <li>
+                            <a href="#">Ссылка на популярную услугу</a>
+                        </li>
+                        <li>
+                            <a href="#">Ссылка на популярную услугу</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <!-- Information block -->
+            <div class="uk-section uk-background-muted">
+                <div class="uk-container">
+                    <h3>Заголовок h3</h3>
+
+                    <div uk-slideshow="max-height: 400; animation: fade">
+
+                        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+
+                            <ul class="uk-slideshow-items">
+                                <li>
+                                    <img src="https://via.placeholder.com/1200x400" alt="" uk-cover>
+                                    <div class="uk-overlay uk-overlay-primary uk-position-right uk-transition-slide-right uk-width-large">
+                                        <h4>Заголовок h4</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                                            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                        </p>
+                                        <div class="uk-margin">
+                                            <a href="#" class="uk-button uk-button-text">Read more</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="https://via.placeholder.com/1200x400" alt="" uk-cover>
+                                    <div class="uk-overlay uk-overlay-primary uk-position-right uk-transition-slide-right uk-width-large">
+                                        <h4>Заголовок h4</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat.
+                                        </p>
+                                        <div class="uk-margin">
+                                            <a href="#" class="uk-button uk-button-text">Read more</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="https://via.placeholder.com/1200x400" alt="" uk-cover>
+                                    <div class="uk-overlay uk-overlay-primary uk-position-right uk-transition-slide-right uk-width-large">
+                                        <h4>Заголовок h4</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                                            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                        </p>
+                                        <div class="uk-margin">
+                                            <a href="#" class="uk-button uk-button-text">Read more</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+                        </div>
+
+                        <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+                    </div>
+                    
+                    <div class="uk-margin uk-text-center">
+                        <a href="#" class="uk-button uk-button-primary">Ссылка на весь архив статей</a>
+                    </div>
                 </div>
             </div>
 
         </div>
 
         <!--Footer-->
-        <footer class="uk-section">
+        <footer class="footer uk-section uk-section-small uk-background-secondary uk-light">
             <div class="uk-container">
-
+                <div class="uk-child-width-auto@m uk-grid-small uk-flex-middle uk-flex-between" uk-grid>
+                    <div>
+                        <div class="">© 2019 copyright Все права защищены</div>
+                    </div>
+                    <div class="uk-width-1-2@m uk-flex uk-flex-center">
+                        <ul class="uk-subnav">
+                            <li class="uk-active"><a href="#">Главная</a></li>
+                            <li>
+                                <a href="#">Услуги эвакуатора</a>
+                                <div uk-dropdown="mode: click;">
+                                    <ul class="uk-nav uk-dropdown-nav">
+                                        <li><a href="#">Пункт меню</a></li>
+                                        <li><a href="#">Пункт меню</a></li>
+                                        <li><a href="#">Пункт меню</a></li>
+                                        <li><a href="#">Пункт выпадающего меню</a></li>
+                                        <li><a href="#">Пункт меню</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">Пункт меню</a>
+                                <div uk-dropdown="mode: click;">
+                                    <ul class="uk-nav uk-dropdown-nav">
+                                        <li><a href="#">Пункт меню</a></li>
+                                        <li><a href="#">Пункт выпадающего меню</a></li>
+                                        <li><a href="#">Пункт выпадающего меню</a></li>
+                                        <li><a href="#">Пункт выпадающего меню</a></li>
+                                        <li><a href="#">Пункт выпадающего меню</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">Пункт меню</a>
+                            </li>
+                            <li>
+                                <a href="#">Пункт меню</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <!--logo-->
+                        <a class="uk-logo" href="/">
+                            <img src="https://via.placeholder.com/300x60" alt="logo">
+                        </a>
+                    </div>
+                </div>
             </div>
         </footer>
+    </div>
+
+    <!-- Modal form ( call a tow truck (reverse) ) -->
+    <div id="form-call-reverse" class="uk-flex-top" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <form action="">
+                <div class="uk-modal-header">
+                    <h2 class="uk-modal-title">Форма заказа эвакуатора</h2>
+                </div>
+                <div class="uk-modal-body">
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="order-phone">Ваш телефон</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="order-phone" type="text" placeholder="+7 ( ___ ) ___ - __ - __">
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="order-name">Ваше имя</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="order-name" type="text" placeholder="Name">
+                        </div>
+                    </div>
+
+                    <div class="uk-margin">
+                        <h5 class="uk-form-label uk-margin-small-bottom">Тип транспорта</h5>
+                        <div class="uk-child-width-1-1 uk-form-controls uk-grid-small" uk-grid>
+                            <label><input class="uk-radio" type="radio" name="radio0"> Мотоцикл</label>
+                            <label><input class="uk-radio" type="radio" name="radio0"> Легковой автомобиль</label>
+                            <label><input class="uk-radio" type="radio" name="radio0"> Внедорожник</label>
+                            <label><input class="uk-radio" type="radio" name="radio0"> Коммерческий транспорт</label>
+                        </div>
+                    </div>
+
+                    <div class="uk-margin">
+                        <h5 class="uk-form-label uk-margin-small-bottom">Сколько колес заблокировано?</h5>
+                        <div class="uk-child-width-auto uk-form-controls uk-grid-small" uk-grid>
+                            <label><input class="uk-radio" type="radio" name="radio01" checked> 0</label>
+                            <label><input class="uk-radio" type="radio" name="radio01"> 1</label>
+                            <label><input class="uk-radio" type="radio" name="radio01"> 2</label>
+                            <label><input class="uk-radio" type="radio" name="radio01"> 3</label>
+                            <label><input class="uk-radio" type="radio" name="radio01"> 4</label>
+                        </div>
+                    </div>
+
+                    <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid" uk-margin>
+                        <label><input class="uk-checkbox" type="checkbox"> Руль заблокирован</label>
+                        <label><input class="uk-checkbox" type="checkbox"> КПП заблокирована</label>
+                    </div>
+
+                </div>
+                <div class="uk-modal-footer uk-text-right">
+                    <button class="uk-button uk-button-primary" type="button">Заказать</button>
+                </div>
+            </form>
+        </div>
     </div>
 
     <!-- Off-canvas -->
@@ -82,10 +908,52 @@
             <button class="uk-offcanvas-close" type="button" uk-close></button>
 
             <div class="uk-card uk-flex uk-flex-center">
-                <ul class="uk-nav">
-                    <li><a href="#"></a></li>
-                </ul>
+                <div uk-margin="margin: uk-margin-top">
+
+                    <div class="uk-hidden@l">
+                        <a href="#form-call-reverse" class="uk-button uk-button-primary" uk-toggle>Заказать эвакуатор</a>
+                    </div>
+
+                    <div class="uk-hidden@m">
+                        <a href="tel:+71234567890" class="uk-flex-last@l">+7 123 456 78 90</a>
+                    </div>
+
+                    <ul class="uk-nav">
+                        <li class="uk-active"><a href="#">Главная</a></li>
+                        <li>
+                            <a href="#">Услуги эвакуатора</a>
+                            <div class="uk-navbar-dropdown">
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li><a href="#">Пункт меню</a></li>
+                                    <li><a href="#">Пункт меню</a></li>
+                                    <li><a href="#">Пункт меню</a></li>
+                                    <li><a href="#">Пункт выпадающего меню</a></li>
+                                    <li><a href="#">Пункт меню</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Пункт меню</a>
+                            <div class="uk-navbar-dropdown">
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li><a href="#">Пункт меню</a></li>
+                                    <li><a href="#">Пункт выпадающего меню</a></li>
+                                    <li><a href="#">Пункт выпадающего меню</a></li>
+                                    <li><a href="#">Пункт выпадающего меню</a></li>
+                                    <li><a href="#">Пункт выпадающего меню</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Пункт меню</a>
+                        </li>
+                        <li>
+                            <a href="#">Пункт меню</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
+
         </div>
     </div>
 

@@ -1,0 +1,32 @@
+.header {
+  padding: 15px 0;
+
+
+  &__phone {
+    font-size: 30px;
+    font-weight: bold;
+    color: @text-color;
+
+    &:hover,
+    &:focus {
+      color: lighten(@text-color, 20%);
+      text-decoration: none;
+    }
+  }
+}
+
+.slogan {
+  margin-top: 5px;
+}
+
+@media (max-width: 639px) {
+
+  .header {
+
+    .uk-navbar-item,
+    .uk-navbar-nav > li > a,
+    .uk-navbar-toggle {
+      min-height: 40px;
+    }
+  }
+}
